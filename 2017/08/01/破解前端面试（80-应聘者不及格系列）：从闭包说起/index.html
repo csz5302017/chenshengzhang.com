@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 面试 | 陈小强的个人博客</title>
+  <title>破解前端面试（80%应聘者不及格系列）：从闭包说起 | 陈小强的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="陈小强的个人博客">
-<meta property="og:url" content="http://yoursite.com/tags/面试/index.html">
+  <meta name="description" content="转自知乎 作者王仕军  不起眼的开始招聘前端工程师，尤其是中高级前端工程师，扎实的 JS 基础绝对是必要条件，基础不扎实的工程师在面对前端开发中的各种问题时大概率会束手无策。在考察候选人 JS 基础的时候，我经常会提供下面这段代码，然后让候选人分析它实际运行的结果： 123456for (var i = 0; i &amp;lt; 5; i++) &amp;#123;    setTimeout(functio">
+<meta name="keywords" content="-面试 -转载 -闭包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="破解前端面试（80%应聘者不及格系列）：从闭包说起">
+<meta property="og:url" content="http://yoursite.com/2017/08/01/破解前端面试（80-应聘者不及格系列）：从闭包说起/index.html">
 <meta property="og:site_name" content="陈小强的个人博客">
+<meta property="og:description" content="转自知乎 作者王仕军  不起眼的开始招聘前端工程师，尤其是中高级前端工程师，扎实的 JS 基础绝对是必要条件，基础不扎实的工程师在面对前端开发中的各种问题时大概率会束手无策。在考察候选人 JS 基础的时候，我经常会提供下面这段代码，然后让候选人分析它实际运行的结果： 123456for (var i = 0; i &amp;lt; 5; i++) &amp;#123;    setTimeout(functio">
+<meta property="og:updated_time" content="2018-03-02T07:15:59.463Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="陈小强的个人博客">
+<meta name="twitter:title" content="破解前端面试（80%应聘者不及格系列）：从闭包说起">
+<meta name="twitter:description" content="转自知乎 作者王仕军  不起眼的开始招聘前端工程师，尤其是中高级前端工程师，扎实的 JS 基础绝对是必要条件，基础不扎实的工程师在面对前端开发中的各种问题时大概率会束手无策。在考察候选人 JS 基础的时候，我经常会提供下面这段代码，然后让候选人分析它实际运行的结果： 123456for (var i = 0; i &amp;lt; 5; i++) &amp;#123;    setTimeout(functio">
   
     <link rel="alternative" href="/atom.xml" title="陈小强的个人博客" type="application/atom+xml">
   
@@ -149,68 +154,214 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-破解前端面试（80-应聘者不及格系列）：从闭包说起" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/01/破解前端面试（80% 应聘者不及格系列）：从 闭包说起/" class="archive-article-date">
-  	<time datetime="2017-08-01T03:12:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/01/破解前端面试（80% 应聘者不及格系列）：从 闭包说起/">破解前端面试（80% 应聘者不及格系列）：从 闭包说起</a>
+    <h1 class="article-title" itemprop="name">
+      破解前端面试（80%应聘者不及格系列）：从闭包说起
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/08/01/破解前端面试（80-应聘者不及格系列）：从闭包说起/" class="archive-article-date">
+  	<time datetime="2017-08-01T07:12:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>转自知乎 作者王仕军</p>
+</blockquote>
+<h2 id="不起眼的开始"><a href="#不起眼的开始" class="headerlink" title="不起眼的开始"></a>不起眼的开始</h2><p>招聘前端工程师，尤其是中高级前端工程师，扎实的 JS 基础绝对是必要条件，基础不扎实的工程师在面对前端开发中的各种问题时大概率会束手无策。在考察候选人 JS 基础的时候，我经常会提供下面这段代码，然后让候选人分析它实际运行的结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        console.log(new Date, i);</span><br><span class="line">    &#125;, 1000);</span><br><span class="line">&#125;</span><br><span class="line">console.log(new Date, i);</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>这段代码很短，只有 7 行，我想，能读到这里的同学应该不需要我逐行解释这段代码在做什么吧。候选人面对这段代码时给出的结果也不尽相同，以下是典型的答案：</p>
+<ul>
+<li>A. 20% 的人会快速扫描代码，然后给出结果：0,1,2,3,4,5；</li>
+<li>B. 30% 的人会拿着代码逐行看，然后给出结果：5,0,1,2,3,4；</li>
+<li>C. 50% 的人会拿着代码仔细琢磨，然后给出结果：5,5,5,5,5,5；</li>
+</ul>
+<p>只要你对 JS 中同步和异步代码的区别、变量作用域、闭包等概念有正确的理解，就知道正确答案是 C，代码的实际输出是：</p>
+<blockquote>
+<p>2017-03-18T00:43:45.873Z 5<br>2017-03-18T00:43:46.866Z 5<br>2017-03-18T00:43:46.868Z 5<br>2017-03-18T00:43:46.868Z 5<br>2017-03-18T00:43:46.868Z 5<br>2017-03-18T00:43:46.868Z 5</p>
+</blockquote>
+<p>接下来我会追问：如果我们约定，用箭头表示其前后的两次输出之间有 1 秒的时间间隔，而逗号表示其前后的两次输出之间的时间间隔可以忽略，代码实际运行的结果该如何描述？会有下面两种答案：</p>
+<ul>
+<li><p>A. 60% 的人会描述为：5 -&gt; 5 -&gt; 5 -&gt; 5 -&gt; 5，即每个 5 之间都有 1 秒的时间间隔；</p>
+</li>
+<li><p>B. 40% 的人会描述为：5 -&gt; 5,5,5,5,5，即第 1 个 5 直接输出，1 秒之后，输出 5 个 5；</p>
+</li>
+</ul>
+<p>这就要求候选人对 JS 中的定时器工作机制非常熟悉，循环执行过程中，几乎同时设置了 5 个定时器，一般情况下，这些定时器都会在 1 秒之后触发，而循环完的输出是立即执行的，显而易见，正确的描述是 B。</p>
+<p>如果到这里算是及格的话，100 个人参加面试只有 20 人能及格，读到这里的同学可以仔细思考，你及格了么？</p>
+<h2 id="追问1-：闭包"><a href="#追问1-：闭包" class="headerlink" title="追问1 ：闭包"></a>追问1 ：闭包</h2><p>如果这道题仅仅是考察候选人对 JS 异步代码、变量作用域的理解，局限性未免太大，接下来我会追问，如果期望代码的输出变成：5 -&gt; 0,1,2,3,4，该怎么改造代码？熟悉闭包的同学很快能给出下面的解决办法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">    (<span class="keyword">function</span>(j) &#123;  // j = i</span><br><span class="line">        setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            console.log(new Date, j);</span><br><span class="line">        &#125;, 1000);</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br><span class="line">console.log(new Date, i);</span><br></pre></td></tr></table></figure>
+<p>巧妙的利用 IIFE（Immediately Invoked Function Expression：声明即执行的函数表达式）来解决闭包造成的问题，确实是不错的思路，但是初学者可能并不觉得这样的代码很好懂，至少笔者初入门的时候这里琢磨了一会儿才真正理解。</p>
+<p>有没有更符合直觉的做法？答案是有，我们只需要对循环体稍做手脚，让负责输出的那段代码能拿到每次循环的 i 值即可。该怎么做呢？利用 JS 中基本类型（Primitive Type）的参数传递是按值传递（Pass by Value）的特征，不难改造出下面的代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var output = <span class="keyword">function</span> (i) &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        console.log(new Date, i);</span><br><span class="line">    &#125;, 1000);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">    output(i);  // 这里传过去的 i 值被复制了</span><br><span class="line">&#125;</span><br><span class="line">console.log(new Date, i);</span><br></pre></td></tr></table></figure>
+<p>能给出上述 2 种解决方案的候选人可以认为对 JS 基础的理解和运用是不错的，可以各加 10 分。当然实际面试中还有候选人给出如下的代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        console.log(new Date, i);</span><br><span class="line">    &#125;, 1000);</span><br><span class="line">&#125;</span><br><span class="line">console.log(new Date, i);</span><br></pre></td></tr></table></figure>
+<p>细心的同学会发现，这里只有个非常细微的变动，即使用 ES6 块级作用域（Block Scope）中的 let 替代了 var，但是代码在实际运行时会报错，因为最后那个输出使用的 i 在其所在的作用域中并不存在，i 只存在于循环内部。</p>
+<p>能想到 ES6 特性的同学虽然没有答对，但是展示了自己对 ES6 的了解，可以加 5 分，继续进行下面的追问。</p>
+<h2 id="追问-2：ES6"><a href="#追问-2：ES6" class="headerlink" title="追问 2：ES6"></a>追问 2：ES6</h2><p>有经验的前端同学读到这里可能有些不耐烦了，扯了这么多，都是他知道的内容，先别着急，挑战的难度会继续增加。</p>
+<p>接着上文继续追问：如果期望代码的输出变成 0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5，并且要求原有的代码块中的循环和两处 console.log 不变，该怎么改造代码？新的需求可以精确的描述为：代码执行时，立即输出 0，之后每隔 1 秒依次输出 1,2,3,4，循环结束后在大概第 5 秒的时候输出 5（这里使用大概，是为了避免钻牛角尖的同学陷进去，因为 JS 中的定时器触发时机有可能是不确定的，具体可参见 How Javascript Timers Work）。</p>
+<p>看到这里，部分同学会给出下面的可行解：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">    (<span class="keyword">function</span>(j) &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            console.log(new Date, j);</span><br><span class="line">        &#125;, 1000 * j));  // 这里修改 0~4 的定时器时间</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br><span class="line">setTimeout(<span class="function"><span class="title">function</span></span>() &#123; // 这里增加定时器，超时设置为 5 秒</span><br><span class="line">    console.log(new Date, i);</span><br><span class="line">&#125;, 1000 * i)</span><br></pre></td></tr></table></figure>
+<p>不得不承认，这种做法虽粗暴有效，但是不算是能额外加分的方案。如果把这次的需求抽象为：在系列异步操作完成（每次循环都产生了 1 个异步操作）之后，再做其他的事情，代码该怎么组织？聪明的你是不是想起了什么？对，就是 Promise。</p>
+<p>可能有的同学会问，不就是在控制台输出几个数字么？至于这样杀鸡用牛刀？你要知道，面试官真正想考察的是候选人是否具备某种能力和素质，因为在现代的前端开发中，处理异步的代码随处可见，熟悉和掌握异步操作的流程控制是成为合格开发者的基本功。</p>
+<p>顺着下来，不难给出基于 Promise 的解决方案（既然 Promise 是 ES6 中的新特性，我们的新代码使用 ES6 编写是不是会更好？如果你这么写了，大概率会让面试官心生好感）：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">const tasks = [];</span><br><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; 5; i++) &#123;   // 这里 i 的声明不能改成 <span class="built_in">let</span>，如果要改该怎么做？</span><br><span class="line">    ((j) =&gt; &#123;</span><br><span class="line">        tasks.push(new Promise((resolve) =&gt; &#123;</span><br><span class="line">            setTimeout(() =&gt; &#123;</span><br><span class="line">                console.log(new Date, j);</span><br><span class="line">                resolve();  // 这里一定要 resolve，否则代码不会按预期 work</span><br><span class="line">            &#125;, 1000 * j);   // 定时器的超时时间逐步增加</span><br><span class="line">        &#125;));</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br><span class="line">Promise.all(tasks).<span class="keyword">then</span>(() =&gt; &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">        console.log(new Date, i);</span><br><span class="line">    &#125;, 1000);   // 注意这里只需要把超时设置为 1 秒</span><br><span class="line">&#125;);</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">相比而言，笔者更倾向于下面这样看起来更简洁的代码，要知道编程风格也是很多面试官重点考察的点，代码阅读时的颗粒度更小，模块化更好，无疑会是加分点。</span><br><span class="line"></span><br><span class="line">``` bash </span><br><span class="line">const tasks = []; // 这里存放异步操作的 Promise</span><br><span class="line">const output = (i) =&gt; new Promise((resolve) =&gt; &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">        console.log(new Date, i);</span><br><span class="line">        resolve();</span><br><span class="line">    &#125;, 1000 * i);</span><br><span class="line">&#125;);</span><br><span class="line">// 生成全部的异步操作</span><br><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">    tasks.push(output(i));</span><br><span class="line">&#125;</span><br><span class="line">// 异步操作完成之后，输出最后的 i</span><br><span class="line">Promise.all(tasks).<span class="keyword">then</span>(() =&gt; &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">        console.log(new Date, i);</span><br><span class="line">    &#125;, 1000);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>读到这里的同学，恭喜你，你下次面试遇到类似的问题，至少能拿到 80 分。</p>
+<p>我们都知道使用 Promise 处理异步代码比回调机制让代码可读性更高，但是使用 Promise 的问题也很明显，即如果没有处理 Promise 的 reject，会导致错误被丢进黑洞，好在新版的 Chrome 和 Node 7.x 能对未处理的异常给出 Unhandled Rejection Warning，而排查这些错误还需要一些特别的技巧（浏览器、Node.js）。</p>
+<h2 id="追问-3：ES7"><a href="#追问-3：ES7" class="headerlink" title="追问 3：ES7"></a>追问 3：ES7</h2><p>既然你都看到这里了，那就再坚持 2 分钟，接下来的内容会让你明白你的坚持是值得的。</p>
+<p>多数面试官在决定聘用某个候选人之前还需要考察另外一项重要能力，即技术自驱力，直白的说就是候选人像有内部的马达在驱动他，用漂亮的方式解决工程领域的问题，不断的跟随业务和技术变得越来越牛逼，究竟什么是牛逼？建议阅读程序人生的这篇剖析。</p>
+<p>回到正题，既然 Promise 已经被拿下，如何使用 ES7 中的 async await 特性来让这段代码变的更简洁？你是否能够根据自己目前掌握的知识给出答案？请在这里暂停 1 分钟，思考下。</p>
+<p>下面是笔者给出的参考代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 模拟其他语言中的 sleep，实际上可以是任何异步操作</span><br><span class="line">const sleep = (timeountMS) =&gt; new Promise((resolve) =&gt; &#123;</span><br><span class="line">    setTimeout(resolve, timeountMS);</span><br><span class="line">&#125;);</span><br><span class="line">(async () =&gt; &#123;  // 声明即执行的 async 函数表达式</span><br><span class="line">    <span class="keyword">for</span> (var i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">        await sleep(1000);</span><br><span class="line">        console.log(new Date, i);</span><br><span class="line">    &#125;</span><br><span class="line">    await sleep(1000);</span><br><span class="line">    console.log(new Date, i);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果111<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">闭包</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">转载</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-面试 -转载 -闭包</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/08/01/破解前端面试（80-应聘者不及格系列）：从闭包说起/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/07/28/如何建立个人博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何建立个人博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -233,9 +384,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -311,15 +462,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">闭包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">转载</a>
+                <a href="javascript:void(0)" class="js-tag color2">-面试 -转载 -闭包</a>
               </li>
             
             <div class="clearfix"></div>
