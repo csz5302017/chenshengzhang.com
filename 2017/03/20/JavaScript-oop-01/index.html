@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://csz5302017.github.io">
-  <title>Archives | 陈小强的个人博客</title>
+  <title>JavaScript面对对象编程:封装 | 陈小强的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="陈小强的个人博客">
-<meta property="og:url" content="https://csz5302017.github.io/archives/index.html">
+  <meta name="description" content="概念：1、我们为什么学代码？为了控制计算机，让其高效的为我们做事。">
+<meta name="keywords" content="JavaScript,前端,OOP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript面对对象编程:封装">
+<meta property="og:url" content="https://csz5302017.github.io/2017/03/20/JavaScript-oop-01/index.html">
 <meta property="og:site_name" content="陈小强的个人博客">
+<meta property="og:description" content="概念：1、我们为什么学代码？为了控制计算机，让其高效的为我们做事。">
+<meta property="og:image" content="c:/Users/HSAEE/Desktop/资源/img/1.png">
+<meta property="og:updated_time" content="2017-11-01T07:58:47.352Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="陈小强的个人博客">
+<meta name="twitter:title" content="JavaScript面对对象编程:封装">
+<meta name="twitter:description" content="概念：1、我们为什么学代码？为了控制计算机，让其高效的为我们做事。">
+<meta name="twitter:image" content="c:/Users/HSAEE/Desktop/资源/img/1.png">
   
     <link rel="alternative" href="/atom.xml" title="陈小强的个人博客" type="application/atom+xml">
   
@@ -149,340 +156,92 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaScript-oop-01" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/01/JavaScript-es6/" class="archive-article-date">
-  	<time datetime="2017-08-01T15:11:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/01/JavaScript-es6/">总结ES6常用的新特性</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript面对对象编程:封装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/工作//" class="article-tag-list-link color3">工作</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/01/破解前端面试（80-应聘者不及格系列）：从闭包说起/" class="archive-article-date">
-  	<time datetime="2017-08-01T07:12:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/01/破解前端面试（80-应聘者不及格系列）：从闭包说起/">破解前端面试（80%应聘者不及格系列）：从闭包说起</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">转载</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">闭包</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/28/如何建立个人博客/" class="archive-article-date">
-  	<time datetime="2017-07-28T10:54:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/28/如何建立个人博客/">如何建立个人博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/23/css3-study-02/" class="archive-article-date">
-  	<time datetime="2017-07-23T09:41:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/23/css3-study-02/">CSS3 3D立方体效果－transform也不过如此</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS3</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">3D效果</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/工作//" class="article-tag-list-link color3">工作</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/09/css3-study-01/" class="archive-article-date">
-  	<time datetime="2017-07-09T12:39:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/09/css3-study-01/">CSS3初体验之奇技淫巧</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS3</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">实例</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/工作//" class="article-tag-list-link color3">工作</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/01/canvas/" class="archive-article-date">
-  	<time datetime="2017-06-01T03:07:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/01/canvas/">canvas学习之API整理笔记（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">canvas</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">html5</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/工作//" class="article-tag-list-link color3">工作</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/20/JavaScript-oop-01/" class="archive-article-date">
+        
+        <a href="/2017/03/20/JavaScript-oop-01/" class="archive-article-date">
   	<time datetime="2017-03-20T11:49:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/20/JavaScript-oop-01/">JavaScript面对对象编程:封装</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><hr></p>
+<h2 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h2><h3 id="1、我们为什么学代码？"><a href="#1、我们为什么学代码？" class="headerlink" title="1、我们为什么学代码？"></a>1、我们为什么学代码？</h3><h3 id="为了控制计算机，让其高效的为我们做事。"><a href="#为了控制计算机，让其高效的为我们做事。" class="headerlink" title="为了控制计算机，让其高效的为我们做事。"></a><font color="red">为了控制计算机，让其高效的为我们做事。</font></h3><a id="more"></a>
+<h3 id="2、怎么让计算机高效的为我们做事？"><a href="#2、怎么让计算机高效的为我们做事？" class="headerlink" title="2、怎么让计算机高效的为我们做事？"></a>2、怎么让计算机高效的为我们做事？</h3><h3 id="编写高效的代码。"><a href="#编写高效的代码。" class="headerlink" title="编写高效的代码。"></a><font color="red">编写高效的代码。</font></h3><h3 id="3、计算机语言的发展。"><a href="#3、计算机语言的发展。" class="headerlink" title="3、计算机语言的发展。"></a>3、计算机语言的发展。</h3><h3 id="机械语言–-gt-汇编语言–-gt-面向过程语言（C）–-gt-面向对象语言（Java，c-JavaScrpt……）。"><a href="#机械语言–-gt-汇编语言–-gt-面向过程语言（C）–-gt-面向对象语言（Java，c-JavaScrpt……）。" class="headerlink" title="机械语言–&gt;汇编语言–&gt;面向过程语言（C）–&gt;面向对象语言（Java，c++,JavaScrpt……）。"></a><font color="red">机械语言–&gt;汇编语言–&gt;面向过程语言（C）–&gt;面向对象语言（Java，c++,JavaScrpt……）。</font></h3><h3 id="4、面向过程？面向对象？"><a href="#4、面向过程？面向对象？" class="headerlink" title="4、面向过程？面向对象？"></a>4、面向过程？面向对象？</h3><h3 id="面向过程的语言逻辑复杂，代码很难复用。"><a href="#面向过程的语言逻辑复杂，代码很难复用。" class="headerlink" title="面向过程的语言逻辑复杂，代码很难复用。"></a><font color="red">面向过程的语言逻辑复杂，代码很难复用。</font></h3><h3 id="面向对象的语言复用性高，且可以使程序员注重逻辑的实现，而非功能的实现。"><a href="#面向对象的语言复用性高，且可以使程序员注重逻辑的实现，而非功能的实现。" class="headerlink" title="面向对象的语言复用性高，且可以使程序员注重逻辑的实现，而非功能的实现。"></a><font color="red">面向对象的语言复用性高，且可以使程序员注重逻辑的实现，而非功能的实现。</font></h3><h3 id="5、面向对象的优点。"><a href="#5、面向对象的优点。" class="headerlink" title="5、面向对象的优点。"></a>5、面向对象的优点。</h3><blockquote>
+<h3 id="易维护、易扩展、模块化"><a href="#易维护、易扩展、模块化" class="headerlink" title="易维护、易扩展、模块化"></a>易维护、易扩展、模块化</h3></blockquote>
+<hr>
+<h2 id="面向对象VS面向过程"><a href="#面向对象VS面向过程" class="headerlink" title="面向对象VS面向过程"></a>面向对象VS面向过程</h2><blockquote>
+<p>面向对象：  狗.吃(屎)<br>面向过程：  吃(狗,屎)</p>
+</blockquote>
+<p>所以，我们可以认为，代码的可复用性，是面向对象的语言和面向过程的语言最大的区别之一。</p>
+<font color="#f1a">以这一点来看，目前为止，我们大多数人都在面向过程编程（即使Javscript是支持面向对象的。）</font>
 
-        <div class="article-info info-on-right">
-          
+<h2 id="举栗子"><a href="#举栗子" class="headerlink" title="举栗子:"></a><font color="#ccc">举栗子:</font></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">创建一个对象的模型</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> Student = &#123;</span><br><span class="line">    name:<span class="string">''</span>;</span><br><span class="line">    sex:<span class="string">''</span>;</span><br><span class="line">    age:<span class="string">''</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>后面所有的学生对象，都按照这个模型来创建。</p>
+<p>现在开始创建一个学生对象，我们最少有三个属性：<code>name</code>,<code>sex</code>,<code>age</code>;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">'朱银傲'</span>;</span><br><span class="line"><span class="keyword">var</span> sex = <span class="string">'男'</span>;</span><br><span class="line"><span class="keyword">var</span> age = <span class="string">'23'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">创建对象。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> Student1 = &#123;</span><br><span class="line">    name:<span class="string">'朱银傲'</span>;</span><br><span class="line">    sex:<span class="string">'男'</span>;</span><br><span class="line">    age:<span class="string">'23'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<font color="#f0f">Student1相当于大盒子，不打开这个盒子，就无法获取其中的内容，这就是最简单的封装</font>
+
+<p>但是有一个问题。<br>我们班的同学并不是只有一个。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">创建很多个同学实例。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> Student1 = &#123;</span><br><span class="line">    name:<span class="string">'朱银傲'</span>;</span><br><span class="line">    sex:<span class="string">'男'</span>;</span><br><span class="line">    age:<span class="string">'23'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> Student2 = &#123;</span><br><span class="line">    name:<span class="string">'方楠'</span>;</span><br><span class="line">    sex:<span class="string">'男'</span>;</span><br><span class="line">    age:<span class="string">'29'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> Student3 = &#123;</span><br><span class="line">    name:<span class="string">'周莹莹'</span>;</span><br><span class="line">    sex:<span class="string">'女'</span>;</span><br><span class="line">    age:<span class="string">'18'</span>;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<font color="#a3a">这样的话，创造对象就成了一个繁琐的过程，即使他们封装的属性是差不多的。</font>
+
+<p>那么有没有简单的方法来创建对象呢？</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,sex,age</span>) </span>&#123;</span><br><span class="line">　　　　<span class="keyword">return</span> &#123;</span><br><span class="line">　　　　　　    name:name,</span><br><span class="line">　　　　　  　  sex:sex,</span><br><span class="line">　　　　　  　  age:age,</span><br><span class="line">　　　          　&#125;</span><br><span class="line">　　　         &#125;</span><br></pre></td></tr></table></figure>
+<p>这样的话，每次运行这个函数，返回的都是一个对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Student1 = Student（<span class="string">'朱银傲'</span>，<span class="string">'男'</span>，<span class="string">'23'</span>）；</span><br><span class="line"><span class="keyword">var</span> Student2 = Student（<span class="string">'方楠'</span>，<span class="string">'男'</span>，<span class="string">'29'</span>）；</span><br></pre></td></tr></table></figure>
+<p>这种方法显然方便了很多。<br>但貌似创建出来的两个对象之间，没有什么联系。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">构造函数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">　　<span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,sex.age</span>)</span>&#123;</span><br><span class="line">　　　　<span class="keyword">this</span>.name=name;</span><br><span class="line">　　　　<span class="keyword">this</span>.sex=sex;</span><br><span class="line">　　　　<span class="keyword">this</span>.age=age;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Student1 = <span class="keyword">new</span> Student(<span class="string">'朱银傲'</span>，<span class="string">'男'</span>，<span class="string">'23'</span>)；</span><br><span class="line"><span class="keyword">var</span> Student2 = <span class="keyword">new</span> Student(<span class="string">'方楠'</span>，<span class="string">'男'</span>，<span class="string">'29'</span>)；</span><br></pre></td></tr></table></figure>
+<p>但是还有个问题，我们每个人都有很多能力（方法），最基本的能力：吃饭、睡觉、喝水……<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">创建一个对象的模型</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> Student = &#123;</span><br><span class="line">    class:'9班';</span><br><span class="line">    name:<span class="string">''</span>;</span><br><span class="line">    sex:<span class="string">''</span>;</span><br><span class="line">    age:<span class="string">''</span>;</span><br><span class="line">    eat:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">'吃东西'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    zdx:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">'找对象'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这两个方法和class属性是大家都有的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Student1 = <span class="keyword">new</span> Student(<span class="string">'朱银傲'</span>,<span class="string">'男'</span>,<span class="string">'23'</span>);</span><br><span class="line"><span class="keyword">var</span> Student2 = <span class="keyword">new</span> Student(<span class="string">'方楠'</span>,<span class="string">'男'</span>,<span class="string">'29'</span>);</span><br></pre></td></tr></table></figure></p>
+<p><img src="C:\Users\HSAEE\Desktop\资源\img\1.png"><br>可见每次创建，相同的方法都会占用新的空间。</p>
+<p>这显然是不高效的，如果有很多相同的特点（方法），而且我们要创建很多个同类对象，那么这个程序会很不’环保’。</p>
+<h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a><font color="red">prototype</font></h3><blockquote>
+<p>Javascript规定，每一个构造函数都有一个<code>prototype</code>属性，指向另一个对象。这个对象的所有属性和方法，都会被构造函数的实例继承。<br>这意味着，我们可以把那些不变的属性和方法，直接定义在prototype对象上。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">创建一个对象的模型</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> Student = &#123;</span><br><span class="line">    prototype.class:<span class="string">'9班'</span>;</span><br><span class="line">    name:<span class="string">''</span>;</span><br><span class="line">    sex:<span class="string">''</span>;</span><br><span class="line">    age:<span class="string">''</span>;</span><br><span class="line">    prototype.eat:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">'吃东西'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    prototype.zdx:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">'找对象'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>图2</p>
+<p>至此，我们完成了一个较为完整的封装，现在这个对象模型可以这么写：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">创建一个对象的模型</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,sex,age</span>) </span>&#123;</span><br><span class="line">    Student.prototype.class=<span class="string">'9班'</span>;</span><br><span class="line">    <span class="keyword">this</span>.name=name;</span><br><span class="line">    <span class="keyword">this</span>.sex=sex;</span><br><span class="line">    <span class="keyword">this</span>.age=age;</span><br><span class="line">    Student.prototype.eat=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">'吃东西'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    Student.prototype.zdx=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">'找对象'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样这个函数就可以批量生产我们要的对象类型了，而且可以保证创建出来的对象很’环保’（不会浪费内存空间）。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Student1 = <span class="keyword">new</span> Student(<span class="string">'朱银傲'</span>,<span class="string">'男'</span>,<span class="string">'23'</span>);</span><br><span class="line"><span class="keyword">var</span> Student2 = <span class="keyword">new</span> Student(<span class="string">'方楠'</span>,<span class="string">'男'</span>,<span class="string">'29'</span>);</span><br><span class="line">alert(Student2.class)<span class="comment">//9班</span></span><br></pre></td></tr></table></figure></p>
+<p>具体为什么通过prototype属性可以创建共享方法，请大家参考后续原型链有关知识。<br>未完待续。。。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果111<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -502,19 +261,123 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://csz5302017.github.io/2017/03/20/JavaScript-oop-01/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/01/canvas/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          canvas学习之API整理笔记（一）
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念："><span class="toc-number">1.</span> <span class="toc-text">概念：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、我们为什么学代码？"><span class="toc-number">1.1.</span> <span class="toc-text">1、我们为什么学代码？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为了控制计算机，让其高效的为我们做事。"><span class="toc-number">1.2.</span> <span class="toc-text">为了控制计算机，让其高效的为我们做事。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、怎么让计算机高效的为我们做事？"><span class="toc-number">1.3.</span> <span class="toc-text">2、怎么让计算机高效的为我们做事？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编写高效的代码。"><span class="toc-number">1.4.</span> <span class="toc-text">编写高效的代码。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、计算机语言的发展。"><span class="toc-number">1.5.</span> <span class="toc-text">3、计算机语言的发展。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#机械语言–-gt-汇编语言–-gt-面向过程语言（C）–-gt-面向对象语言（Java，c-JavaScrpt……）。"><span class="toc-number">1.6.</span> <span class="toc-text">机械语言–&gt;汇编语言–&gt;面向过程语言（C）–&gt;面向对象语言（Java，c++,JavaScrpt……）。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、面向过程？面向对象？"><span class="toc-number">1.7.</span> <span class="toc-text">4、面向过程？面向对象？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#面向过程的语言逻辑复杂，代码很难复用。"><span class="toc-number">1.8.</span> <span class="toc-text">面向过程的语言逻辑复杂，代码很难复用。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#面向对象的语言复用性高，且可以使程序员注重逻辑的实现，而非功能的实现。"><span class="toc-number">1.9.</span> <span class="toc-text">面向对象的语言复用性高，且可以使程序员注重逻辑的实现，而非功能的实现。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、面向对象的优点。"><span class="toc-number">1.10.</span> <span class="toc-text">5、面向对象的优点。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#易维护、易扩展、模块化"><span class="toc-number">1.11.</span> <span class="toc-text">易维护、易扩展、模块化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象VS面向过程"><span class="toc-number">2.</span> <span class="toc-text">面向对象VS面向过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#举栗子"><span class="toc-number">3.</span> <span class="toc-text">举栗子:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#prototype"><span class="toc-number">3.1.</span> <span class="toc-text">prototype</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -537,8 +400,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
