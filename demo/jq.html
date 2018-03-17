@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		select{
+			width: 170px;
+            height: 240px;
+            font-size: 18px;
+            background-color: #a4ff34;
+		}
+	</style>
+</head>
+<body>
+	<select name="" id="s1" size="10" multiple="">
+		<option value="0">苹果</option>
+		<option value="1">香蕉</option>
+		<option value="2">桃子</option>
+		<option value="3">梨</option>
+	</select>
+	<button>&#62;&#62;&#62;</button>
+    <button>&#60;&#60;&#60;</button>
+    <button>&#62;</button>
+    <button>&#60;</button>
+	<select name="" id="s2" size="10" multiple="">
+	</select>
+	<script type="text/javascript" src="./jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$('button').eq(0).click(function(event) {
+			$("#s2").append($("#s1 option"))
+		});
+		$('button').eq(1).click(function(event) {
+			$("#s1").append($("#s2 option"))
+		});
+		$('button').eq(2).click(function(event) {
+			$("#s2").append($("#s1 option:selected"))
+		});
+		$('button').eq(3).click(function(event) {
+			$("#s1").append($("#s2 option:selected"))
+		});
+	</script>
+</body>
+</html>

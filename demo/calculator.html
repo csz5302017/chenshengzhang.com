@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+</head>
+<body>
+	<form action="">
+		<input type="text" id="value1">
+		<select name="" id="test">
+			<option value="a1">+</option>
+			<option value="a2">-</option>
+			<option value="a3">*</option>
+			<option value="a4">/</option>
+			<option value="a5">%</option>
+		</select>
+		<input type="text" id="value2">
+		<div id="answer">answer</div>
+		<input type="button" value="计算" onclick="jisuan()">
+	</form>
+	<script>
+		function jisuan(){
+		var value1=document.getElementById("value1").value;
+		var value2=document.getElementById("value2").value;
+		var test1=document.getElementById("test").value;
+		var answer0=document.getElementById("answer");
+		var a=Number(value1);
+		var b=Number(value2);
+		var answer1=a+b;
+		var answer2=a-b;
+		var answer4=a/b;
+		var answer3=a*b;
+		var answer5=a%b;
+		if (test1=="a1") {
+		answer0.innerHTML=answer1;
+		}
+		if (test1=="a2") {
+		answer0.innerHTML=answer2;
+		}
+		if (test1=="a3") {
+		answer0.innerHTML=answer3;
+		}
+		if (test1=="a4") {
+		answer0.innerHTML=answer4;
+		}
+		if (test1=="a5") {
+		answer0.innerHTML=answer5;
+		}
+		}
+	</script>  
+</body>
+</html>

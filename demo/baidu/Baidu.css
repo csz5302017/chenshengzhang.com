@@ -1,0 +1,761 @@
+*{
+	padding: 0px;
+	margin:0px;
+}
+html,body{
+	background: url('image/background.jpg') no-repeat ;
+    background-size:cover; 
+    background-attachment: fixed;
+}
+.main{
+    width: 100%;
+    height: 100%;
+	margin: 0 auto;
+    min-height: 600px;
+    min-width: 950px;
+}
+.nav{
+	width: 100%;
+	height: 32px;
+	background-color: rgba(15,25,20,0.3);
+}
+.nav-left{
+	padding-right: 5px;
+	padding-left: 15px;
+	height: 34px;
+	cursor: pointer;
+	float: left;
+	display: inline-block;
+    position: relative;
+}
+em{
+ 	font-style: normal;
+ 	font-size: 12px;
+ 	color:#FFF;
+ 	vertical-align: middle;
+ 	display: inline-block;
+ 	margin-right: 5px;
+ 	line-height: 20px;
+ 	margin-top: 5px;
+
+}
+.lightning{
+	width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.em-pol{
+	color: #badc00;
+    font-weight: bold;
+}
+.nav-center{
+    display: inline-block;
+}
+.nav-center a{
+	font-size: 12px;
+ 	color:#FFF;
+ 	vertical-align: middle;
+ 	display: inline-block;
+ 	margin-right: 7px;
+ 	line-height: 20px;
+ 	margin-top: 5px;
+}
+.weather{
+        position: absolute;
+        display: none;
+        z-index: 999;
+        top:32px;
+        left: 0px;
+}
+.nav-left:hover .weather{
+    display: block;
+}
+.weather-main{
+    width: 585px;
+    background: #FFF;
+    position: absolute;
+    height: 201px;
+    box-shadow: 1px 2px 1px 0 rgba(0,0,0,0.072);
+}
+.weather-top{
+    width: 585px
+}
+.weather-topc{
+    width: 547px;
+    margin: 0 19px;
+    border-bottom: #efefef 1px solid;
+    font-size: 12px;
+    line-height: 40px;
+}
+.weather-topc span{
+    display: inline-block;
+    height: 40px;
+ }
+.weather-topc1{
+    color: #666;
+}
+.weather-topc2{
+    color: #999;
+    margin-left: 6px;
+}
+.weather-topc3 a{
+    color: #0079F4;
+    text-decoration: none;
+    margin-right: 18px;
+}
+            .weather-topc3 a:hover{
+                text-decoration: underline;
+            }
+            .weather-topc4{
+                width: 40px;
+                float: right;
+                background: url('image/sz.png') no-repeat  -36px -88px;
+                text-align: right;
+                cursor: pointer;
+                color: #666;
+            }
+            .weather-topc4:hover{
+                color: #0079F4;
+                background: url('image/sz.png') no-repeat  -36px -121px;
+            }
+            .weather-bottom div{
+                float: left;
+                width: 105px;
+                text-align: center;
+                font-size: 12px;
+            }
+            .weather-bottom div p{
+                line-height: 18px;
+                margin: 0;
+            }
+            .weather-bottom div .day{
+                height: 34px;
+                line-height: 34px;
+            }
+            .weather-bottom .today{
+                width: 161px;
+                font-weight: bold;
+            }
+            .weather-bottom a{
+                color: #666666;
+                text-decoration: none;
+            }
+            .weather-bottom img{
+                margin-bottom: 4px;
+            }
+            .weather-bottom a:hover{
+                color:#0079F5;
+            }
+            .weather-tri{
+                position: absolute;
+                top: -10px;
+                left: 72px;
+                display: inline-block;
+                width: 0px;
+                height: 0px;
+                border-top: 5px dashed transparent;
+                border-left: 5px dashed transparent;
+                border-right: 5px dashed transparent;
+                border-bottom: 5px solid #fff;
+            }
+
+.nav-right{
+    width: 590px;
+    text-align: right;
+    display: inline-block;
+    height: 34px; 
+    float: right;
+}
+.nav-right>a{
+	vertical-align: middle;
+	color: #FFF;
+	font-size: 13px;
+	position: relative;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 19px;
+    display: inline-block;
+}
+.nav-right .nav-r-a {
+	font-weight: bold;
+}
+.nav-right .nav-more{
+	width: 86px;
+    color: white;
+    background: #38f;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid #398bfb;
+    text-decoration: none;
+}
+
+.nav-adm{
+	position: relative;
+}
+.adm{
+	display: none;
+	float: right;
+}
+.nav-adm:hover +.adm{
+	display:block;
+}
+.adm:hover{
+	display:block;
+}
+.adm-ul{
+	display: inline-block;
+	position: absolute;
+	margin-top: 6px;
+    top: 26px;
+    right: 138px;
+    width: 70px;
+    text-align: left;
+    z-index: 99;
+    box-shadow: 1px 1px 5px #d1d1d1;
+
+}
+.adm-ul li{
+	list-style: none;
+	border: 1px solid #FFF;
+	}
+.adm-ul li a{
+	text-decoration: none;
+    line-height: 25px;
+    padding-left: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: left;
+    display: block;
+    color: #333;
+    margin: 0;
+    font-size: 12px;
+}
+.adm-span{
+	display: block;
+}
+.adm span{
+    position: absolute;
+    display: block;
+    top: 22px;
+    right: 168px;	
+    width: 0px;
+    height: 0px;
+    border-top: 5px dashed transparent;
+    border-left: 5px dashed transparent;
+    border-right: 5px dashed transparent;
+    border-bottom: 5px solid #fff;
+}
+.adm li a:hover{
+    color:#fff;
+    background-color: #3388ff;
+}
+.nav-set{
+	position: relative;
+}
+.set{
+	display: none;
+	float: right;
+}
+.nav-set:hover +.set{
+	display:block;
+}
+.set:hover{
+	display: block;
+}
+.set-ul{
+	display: inline-block;
+	position: absolute;
+	margin-top: 6px;
+    top: 26px;
+    right: 86px;
+    width: 70px;
+    text-align: left;
+    z-index: 99;
+    box-shadow: 1px 1px 5px #d1d1d1;
+}
+.set-ul li{
+	list-style: none;
+	border: 1px solid #FFF;
+}
+.set-ul li a{
+	text-decoration: none;
+    line-height: 25px;
+    padding-left: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: left;
+    display: block;
+    color: #333;
+    margin: 0;
+    font-size: 12px;
+}
+.set-span{
+	display: inline-block;
+}
+.set span{
+    position: absolute;
+    display: inline-block;
+    top: 22px;
+    left: -125px;	
+    width: 0;
+    height: 0;
+    border-top: 5px dashed transparent;
+    border-left: 5px dashed transparent;
+    border-right: 5px dashed transparent;
+    border-bottom: 5px solid #fff;
+}
+.set li a:hover{
+    color:#fff;
+    background-color: #3388ff;
+}
+.more{
+        position: absolute;
+	    z-index: 2;
+		right: 0;
+	    top: 0;
+	    width: 85px;
+	    border-left: 1px solid #e7e7e7;
+		background-color: #f9f9f9;
+		font-size: 13px;
+		min-height: 600px;
+		display: none;
+		overflow: hidden;
+}
+.nav-more:hover+ .more{
+	display: block;
+}
+.more:hover{
+	display: block;
+}
+.more a{
+        display: block;
+		text-align: center;
+		width: 66px;
+		height: 66px;
+		margin: 0 auto;
+		font-size: 12px;
+		border-bottom: #f0f0f0 1px solid;
+		color: #666;
+		text-decoration: none;
+		padding-top: 10px;
+ }
+.more a:hover{
+        text-decoration: underline;
+}
+.more-pro{
+        color: #333;
+		text-align: center;
+		width: 66px;
+		height: 30px;
+		line-height: 34px;
+		padding-bottom: 10px;
+		margin: 0 auto;
+		border-bottom: #f0f0f0 1px solid;
+		font-size: 13px;
+		cursor: default;
+}
+.more .more-all{
+	height: 43px;
+}
+/*上部结束*/
+.bar{
+	width: 100%;
+	position: relative;
+    height: 38.2%;
+    margin: 0 auto;
+}
+.bar-center{
+	width: 1000px;
+	margin:0 auto;
+}
+.bar img{
+	position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -135px;
+    width: 270px;
+    height: 129px;
+}
+.image{
+	height: 61.8%;
+    min-height: 149px;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+}
+.bar-search{
+	margin:0 auto;
+	width: 641px;
+	position: relative;
+}
+.bar-text{
+	padding: 10px 9px 10px 7px;
+	padding-right: 50px!important;
+    border: 0;
+    background-image: none;
+    height: 20px;
+    line-height: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    width: 480px;
+    height: 20px;
+    outline: none;
+    vertical-align: top;
+}
+.bar-submit{
+	background-image: url(image/skin_dark_aab96bcc.png);
+	background-position: -206px 0px;
+	box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+	width: 104px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    color: #000;
+    font-size: 16px;
+    outline: none;
+}
+.bar-submit:active{
+	background-image：url(image/skin_dark_aab96bcc.png);
+	background-position: -311px 0px;
+}
+.bar-search i{
+    background: url(image/camera_new_5606e8f.png) no-repeat;
+	z-index: 1;
+    position: absolute;
+    right: 115px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 18px;
+}
+.bar-search i:hover{
+        background: url(image/camera_new_5606e8f.png) no-repeat 0 -20px;
+    }
+/*输入框结束*/
+ .warp-box{
+                width: 100%;
+                height: 415px;
+                margin-top: 60px;
+                position: relative;
+             }
+             .warp-center{
+                width: 895px;
+                height: 415px;
+                margin: 0 auto;
+                
+             }
+             .warp-top{
+                position: relative;
+                margin: 0 auto;
+                text-align: left;
+                font-size: 14px;
+                border-bottom: 1px solid #e9e9e9;
+                height: 39px;
+                line-height: 40px;
+                width: 895px;
+             }
+             .warp-concern{
+                float: left; 
+                text-align: left; 
+                width: 124px;
+                height: 39px;
+                display: inline-block;
+                cursor: pointer;
+                background-color: #FFF;
+             }
+             .warp-concern:hover{
+                background-color: rgba(240,240,240,0.4);
+             }
+             .concern-img{
+                margin: 11px 0 0 20px;
+                width: 20px;
+                height: 18px;
+                background: url("image/logo-1.png") no-repeat -15px 0;
+                display: inline-block;
+             }
+             .concern-text{
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 3px;
+                color: #333333;
+             }
+             .rencommend{
+                width: 80px;
+                display: inline-block;
+                vertical-align: top;
+                text-align: center;
+                cursor: pointer;
+                background-color: rgba(240,240,240,0.6);
+                font-weight: bold;
+             }
+             .guide{
+                display: inline-block;
+                vertical-align: top;
+                color: #333333;
+                width: 80px;
+                text-align: center;
+                cursor: pointer;
+                background: white;
+                height: 39px;
+             }
+             .guide:hover{
+                background-color: rgba(240,240,240,0.4);
+             }
+             .blank{
+                display: inline-block;
+                height: 39px;
+                width: 611px;
+                background: #FFF;
+             }
+             .s_menu_set{
+                display: inline-block;
+                float: right;
+                width: 18px;
+                height: 18px;
+                margin-top: 11px;
+                margin-right: 21px;
+                overflow: hidden;
+                background: url(image/logo-1.png) no-repeat -121px -49px;
+             }
+             .s_menu_set:hover{
+                background: url(image/logo-1.png) no-repeat -121px -73px;
+             }
+             /* 上部 */
+             .warp-main{
+                padding-right: 20px;
+                padding-left: 20px;
+                background: #FFF;
+                overflow: hidden;
+                border-bottom: 1px solid #FFF;
+            }
+            /*右边*/
+             .warp-right{
+                float: right;
+                width: 300px;
+                height: 302px;
+                margin-top: 20px;
+             }
+             .warp-hot{
+                float: left;
+                height: 22px;
+                width: 94px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .warp-hota{
+                display: block;
+                float: right;
+                height: 22px;
+                width: 70px;
+                cursor: pointer;
+                text-decoration: none;
+                color: #333;
+             }
+             .warp-hota:hover{
+                color: #0077FF;
+             } 
+            .warp-hoticon{
+                display: inline-block;
+                width: 20px;
+                height: 16px;
+                background: url('image/news_88aeb6fe.png') -23px -25px no-repeat;
+            }
+            .warp-hota:hover .warp-hoticon{
+                background: url('image/news_88aeb6fe.png') -23px -42px no-repeat;
+             }
+            .warp-hottext{
+                font-size: 13px;
+                width: 40px;
+                text-align: center;
+                vertical-align: top;
+            }
+            .warp-hot a{
+                text-decoration: none;
+                color: #333;
+            }
+            .warp-rightul li{
+                width: 145px;
+                margin-right: 3px;
+                display: inline-block;
+                float: left;
+                height: 34px;
+            }
+            .warp-rightul li a{
+                color: #333;
+                text-decoration: none;
+                font-size: 14px;
+                line-height: 34px;
+            }
+            .warp-rightul li a:hover{
+                color: #0079F4;
+                text-decoration: underline;
+            }
+            .new-identity{
+                display: inline-block;
+                background: url('image/news_88aeb6fe.png')-57px -98px no-repeat;
+                width: 18px;
+                height: 20px;
+                margin-left: 5px;
+                vertical-align: middle;
+            }
+            /*右边结束*/
+             .warp-title{
+                width: 843px;
+                height: 38px;
+             }
+             .title-1,.title-3{
+                display: inline-block;
+                height: 0;
+                width: 172px;
+                font-size: 0;
+                border-bottom: 1px solid #e2e2e2;
+                margin-top: 21px;
+             }
+             .title-2{
+                display: inline-block;
+                font-size: 13px;
+                color: rgba(0, 0, 0, .4);
+                padding-top: 10px;
+                vertical-align: middle;
+             }
+             .title-2 div{
+                margin-top: 2px;
+             }
+              .title-2 div{
+                vertical-align: top;
+             }
+             
+             .tips-icon{
+                display: inline-block;
+                height: 14px;
+                width: 12px;
+                margin: 0 6px 0 6px;
+                background: url('image/news_88aeb6fe.png') no-repeat -45px -1px;
+             }
+             .warp-left{
+                width: 540px;
+                height: 337px;
+             }
+             .warp-left h2{
+                font-size: 18px;
+                font-family: arial;
+                padding-top: 20px;
+                padding-bottom: 12px;
+             }
+             .warp-left h2 a{
+                color: #333;
+                text-decoration: none;
+             }
+             .warp-left h2 a:hover{
+                color: #0077FF;
+                text-decoration: underline;
+             }
+            .warp-left ul li{
+                float: left;
+                list-style: none;
+                margin-right: 1px;
+            }
+            .warp-left ul li img{
+                width: 179px;
+                height: 119px;
+            }
+            .warp-img-ul{
+                overflow: hidden;
+            }
+            .warp-time{
+                color: rgba(0,0,0,0.4);
+                font-size: 13px;
+                padding-top: 16px;
+                padding-bottom: 19px;
+                width: 538px;
+                border-bottom: 1px solid #E2E2E2;
+            }
+            .warp-time span{
+                cursor: pointer;
+            }
+            .warp-time div{
+                display: inline-block;
+            }
+            .warp-time .warp-timeicon{
+                float: right;
+                display: none;
+                width: 19px;
+                height: 15px;
+                background: url('image/del.png') no-repeat;
+                background-position: -0px -19px;
+            }
+            .warp-timeicon:hover{
+                background: url('image/del.png') no-repeat;
+                background-position: -0px -0px;
+            }
+            .warp-left-img1:hover .warp-timeicon{
+                display: block;
+            }
+            /*主部分结束*/
+            /*地址*/
+            .address{
+                width: 100%;
+                font-size: 12px;
+                color: #FFF;
+                margin-top: 25px;
+                text-align: center;;
+            }
+            .address a{
+                color: #FFF;
+            }
+            .address-s{
+                margin-right: 12px;
+            }
+            .address img{
+                margin: 0 0 -2px 0;
+            }
+            .address-d{
+                margin-top: 5px;
+            }
+            .address-a{
+                color: #FFF;
+                text-decoration:none;
+            }
+            .address-a:hover{
+                text-decoration:underline;
+            }
+            .address-d i{
+                display: inline-block;
+                width: 14px;
+                height: 16px;
+                margin-right: 6px;
+                background: url(image/icon-police.png) 0 0 no-repeat;
+                vertical-align: middle;
+                margin-top: -4px;
+            }
+            /*动画*/
+            .gif-div{
+                position: absolute;
+                bottom: -1px;
+                left: 50%;
+                margin-left: -28px;
+                height: 32px;
+                width: 57px;
+                background: url(image/gif-div.png) no-repeat;
+            }
+            .gif-div2{
+                position: relative;
+                display: block;
+                width: 22px;
+                height: 30px;
+                margin:0 auto;
+                background: url(image/logo-1.png) no-repeat -114px 13px;
+                animation: mymove 1.5s linear infinite;
+            }
+            @keyframes mymove
+            {
+            0%   {top:3px;}
+            50%  {top:-10px;}
+            100% {top:3px;}
+            }
+            

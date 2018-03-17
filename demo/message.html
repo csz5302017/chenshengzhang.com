@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <script src="jquery-3.2.1.js"></script>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="box" class="container">
+    <form class="text-primary" action="#">
+        <div class="form-group ">
+            <label for="user">用户名</label>
+            <input type="text" class="form-control" id="user" placeholder="User" v-model="username">
+        </div>
+        <div class="form-group">
+            <label for="age">年龄</label>
+            <input type="text" class="form-control" id="age" placeholder="Age" v-model="age">
+        </div>
+        <button class="btn btn-default btn-info" @click="add">添加</button>
+        <button class="btn btn-default btn-danger" @click="add">重置</button>
+    </form>
+    <hr>
+    <table class="table table-bordered ">
+        <tr>
+            <th>序号</th>
+            <th>名字</th>
+            <th>年龄</th>
+            <th>操作</th>
+        </tr>
+        <tr v-for="(value,index) in arr">
+            <td>{{index+1}}</td>
+            <td>{{value.user}}</td>
+            <td>{{value.age}}</td>
+            <td><button class="btn btn-default btn-primary" data-toggle="modal" data-target="#myModal" v-on:click="nowIndex=index" >删除</button></td>
+        </tr>
+        <tr v-show="arr.length!=0"><td colspan="4"><button class="btn btn-danger pull-right" data-toggle="modal" data-target="#myModal" v-on:click="nowIndex=-1">全部删除</button></td></tr>
+        <tr v-show="arr.length==0">
+            <td colspan="4">暂无数据……</td>
+        </tr>
+    </table>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示框</h4>
+                </div>
+                <div class="modal-body">
+                    确定删除吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" v-on:click="remove(nowIndex)" data-dismiss="modal">确认</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        var app=new Vue({
+            el: '#box',
+            data: {
+                arr: [{
+                    user:"csz",
+                    age:"18"
+                }],
+                username:"",
+                age:"",
+                nowIndex:-100,
+            },
+            methods:{
+                add:function(){
+                    if(this.username.length==0||this.age.length==0){
+                        alert("请填入完整数据！")
+                    }
+                    else{
+                    this.arr.push({user:this.username,age:this.age})
+                    this.username="";
+                    this.age="";
+                    }
+                },
+                move:function(){
+                    this.username="";
+                    this.age="";
+                },
+                remove:function(nowIndex){
+                    if(nowIndex=-1){
+                        this.arr=[];
+                    }
+                    else{
+                        this.arr.splice(nowIndex,1)
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
